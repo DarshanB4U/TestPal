@@ -23,7 +23,9 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Links */}
         <ModeToggle></ModeToggle>
-        <div className={cn("hidden md:flex space-x-6")}>
+        <div onClick={function(){
+          navigate("/signin")
+        }} className={cn("hidden md:flex space-x-6")}>
           <a href="/signup"  className="text-muted-foreground hover:text-foreground">
             Home
           </a>
