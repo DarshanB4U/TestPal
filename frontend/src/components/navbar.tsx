@@ -23,18 +23,16 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Links */}
         <ModeToggle></ModeToggle>
-        <div onClick={function(){
-          return navigate("/signin")
-        }} className={cn("hidden md:flex space-x-6")}>
+        <div onClick={()=> navigate("/signin")
+        } className={cn("hidden md:flex space-x-6")}>
           <a href="/signup"  className="text-muted-foreground hover:text-foreground">
             Home
           </a>
           <a href="/signin" className="text-muted-foreground hover:text-foreground">
             About
           </a>
-          <div onClick={function(){
-          return navigate("/signup")
-        }} className=""> <Avatar>
+          <div onClick={()=> navigate("/signup")
+        } className=""> <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar></div>
@@ -54,7 +52,8 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-t">
+        <div  onClick={()=> navigate("/signin")
+        } className="md:hidden bg-background border-t">
           <a href="#home" className="block px-4 py-2 hover:bg-accent">
             Home
           </a>
