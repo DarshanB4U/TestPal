@@ -5,10 +5,13 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ModeToggle } from "./model-toggle";
+import { useNavigate } from "react-router-dom";
+
 
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+   const navigate = useNavigate()
 
   return (
     <nav className="bg-background border-b border-s-emerald-900">
@@ -21,10 +24,10 @@ export const Navbar: React.FC = () => {
         {/* Desktop Links */}
         <ModeToggle></ModeToggle>
         <div className={cn("hidden md:flex space-x-6")}>
-          <a href="#home" className="text-muted-foreground hover:text-foreground">
+          <a href="/signup"  className="text-muted-foreground hover:text-foreground">
             Home
           </a>
-          <a href="#about" className="text-muted-foreground hover:text-foreground">
+          <a href="/signin" className="text-muted-foreground hover:text-foreground">
             About
           </a>
           <div className=""> <Avatar>
