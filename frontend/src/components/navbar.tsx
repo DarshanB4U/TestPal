@@ -17,20 +17,20 @@ export const Navbar: React.FC = () => {
     <nav className="bg-background border-b border-s-emerald-900">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="/" className="text-xl shadow-md rounded-sm  p-2 font-bold">
+        <div  className="text-xl shadow-md rounded-sm  p-2 font-bold">
           TestPal
-        </a>
+        </div>
 
         {/* Desktop Links */}
         <ModeToggle></ModeToggle>
         <div onClick={()=> navigate("/signin")
         } className={cn("hidden md:flex space-x-6")}>
-          <a href="/signup"  className="text-muted-foreground hover:text-foreground">
+          <div  className="text-muted-foreground hover:text-foreground">
             Home
-          </a>
-          <a href="/signin" className="text-muted-foreground hover:text-foreground">
+          </div>
+          <div className="text-muted-foreground hover:text-foreground">
             About
-          </a>
+          </div>
           <div onClick={()=> navigate("/signup")
         } className=""> <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -54,12 +54,12 @@ export const Navbar: React.FC = () => {
       {isOpen && (
         <div  onClick={()=> navigate("/signin")
         } className="md:hidden bg-background border-t">
-          <a href="#home" className="block px-4 py-2 hover:bg-accent">
+          <div  className="block px-4 py-2 hover:bg-accent">
             Home
-          </a>
-          <a href="#about" className="block px-4 py-2 hover:bg-accent">
+          </div>
+          <div  className="block px-4 py-2 hover:bg-accent">
             About
-          </a>
+          </div>
            <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
