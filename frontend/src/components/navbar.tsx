@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
         {/* Desktop Links */}
         <ModeToggle></ModeToggle>
         <div onClick={function(){
-          navigate("/signin")
+          return navigate("/signin")
         }} className={cn("hidden md:flex space-x-6")}>
           <a href="/signup"  className="text-muted-foreground hover:text-foreground">
             Home
@@ -32,7 +32,9 @@ export const Navbar: React.FC = () => {
           <a href="/signin" className="text-muted-foreground hover:text-foreground">
             About
           </a>
-          <div className=""> <Avatar>
+          <div onClick={function(){
+          return navigate("/signup")
+        }} className=""> <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar></div>
